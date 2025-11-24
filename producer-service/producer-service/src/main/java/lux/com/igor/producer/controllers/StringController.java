@@ -17,7 +17,7 @@ public class StringController {
     @PostMapping
     public ResponseEntity<String> produce(@RequestParam("message") String message) {
        service.produce(message);
-       return ResponseEntity.ok("Sending message");
+       return ResponseEntity.ok("Sending message: " + message);
     }
 
 }
