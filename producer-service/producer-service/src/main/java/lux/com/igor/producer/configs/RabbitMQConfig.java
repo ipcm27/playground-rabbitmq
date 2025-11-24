@@ -11,14 +11,14 @@ import org.springframework.amqp.core.Queue;
 import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.Configuration;
 
+import static constants.RabbitMQConstants.*;
+
 
 @Configuration
 @Log4j2
 public class RabbitMQConfig {
 
-    public static final String EXCHANGE_NAME_MARKETPLACE = "marketplace.direct";
-    public static final String QUEUE_PRODUCT_LOG = "my.queue";
-    public static final String ROUTING_KEY_PRODUCT_LOG = "my.rk";
+
 
     // Criei a fila
     @Bean

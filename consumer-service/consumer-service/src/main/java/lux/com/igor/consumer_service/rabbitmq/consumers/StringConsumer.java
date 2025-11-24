@@ -1,5 +1,6 @@
 package lux.com.igor.consumer_service.rabbitmq.consumers;
 
+import dtos.ProductDTO;
 import lombok.extern.log4j.Log4j2;
 import org.springframework.amqp.rabbit.annotation.RabbitListener;
 import org.springframework.stereotype.Component;
@@ -12,6 +13,12 @@ public class StringConsumer {
     public void consumer(String message) {
         log.info("Consumer received a message {}", message);
     }
+
+    @RabbitListener(queues = { "product.log" })
+    public void consumer_product(String message) {
+        log.info("Consumer received a message {}", message);
+    }
+
 
 
 }
