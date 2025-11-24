@@ -14,11 +14,4 @@ public class StringConsumer {
         log.info("Consumer received a message {}", message);
     }
 
-    @RabbitListener(queues = { "product.log" })
-    public void consumer_product(String message) {
-        log.info("Consumer received a message {}", message);
-    }
-
-
-
 }
